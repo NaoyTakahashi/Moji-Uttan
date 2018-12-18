@@ -16,6 +16,9 @@
 		397A4CB121A000FA0047DF7A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 397A4CAF21A000FA0047DF7A /* LaunchScreen.storyboard */; };
 		397A4CBC21A000FB0047DF7A /* Moji_UttanTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 397A4CBB21A000FB0047DF7A /* Moji_UttanTests.swift */; };
 		397A4CC721A000FB0047DF7A /* Moji_UttanUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 397A4CC621A000FB0047DF7A /* Moji_UttanUITests.swift */; };
+		6F4043692883DDA9FE144C3E /* Pods_Moji_Uttan.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4562D3F31403DDC8F36C92F8 /* Pods_Moji_Uttan.framework */; };
+		BEF99BEC4E0CB9ADC5AA416D /* Pods_Moji_UttanTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B82680FBE4404AFACC7F551 /* Pods_Moji_UttanTests.framework */; };
+		C398B7F2EBEE73128C1D8CEB /* Pods_Moji_UttanUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DAC2DFCB17918245B112B53 /* Pods_Moji_UttanUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +39,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		04713408E4415C206C55A194 /* Pods-Moji UttanUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Moji UttanUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Moji UttanUITests/Pods-Moji UttanUITests.release.xcconfig"; sourceTree = "<group>"; };
+		26E089402010DB5D0D797361 /* Pods-Moji Uttan.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Moji Uttan.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Moji Uttan/Pods-Moji Uttan.debug.xcconfig"; sourceTree = "<group>"; };
+		3246A95118925890DDEEB843 /* Pods-Moji UttanTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Moji UttanTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Moji UttanTests/Pods-Moji UttanTests.release.xcconfig"; sourceTree = "<group>"; };
 		390C04A021A96E56008A31EF /* HelpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpViewController.swift; sourceTree = "<group>"; };
 		390C04A221A96E84008A31EF /* OutputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutputViewController.swift; sourceTree = "<group>"; };
 		397A4CA321A000F90047DF7A /* Moji Uttan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Moji Uttan.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -51,6 +57,12 @@
 		397A4CC221A000FB0047DF7A /* Moji UttanUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Moji UttanUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		397A4CC621A000FB0047DF7A /* Moji_UttanUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Moji_UttanUITests.swift; sourceTree = "<group>"; };
 		397A4CC821A000FB0047DF7A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3DAC2DFCB17918245B112B53 /* Pods_Moji_UttanUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Moji_UttanUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4562D3F31403DDC8F36C92F8 /* Pods_Moji_Uttan.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Moji_Uttan.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B82680FBE4404AFACC7F551 /* Pods_Moji_UttanTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Moji_UttanTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C5E2EB6443F0164A18518F0B /* Pods-Moji UttanUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Moji UttanUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Moji UttanUITests/Pods-Moji UttanUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		D86C2C9C9378F7941A4190F7 /* Pods-Moji Uttan.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Moji Uttan.release.xcconfig"; path = "Pods/Target Support Files/Pods-Moji Uttan/Pods-Moji Uttan.release.xcconfig"; sourceTree = "<group>"; };
+		DF331C40D96D44650A675132 /* Pods-Moji UttanTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Moji UttanTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Moji UttanTests/Pods-Moji UttanTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6F4043692883DDA9FE144C3E /* Pods_Moji_Uttan.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BEF99BEC4E0CB9ADC5AA416D /* Pods_Moji_UttanTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,6 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C398B7F2EBEE73128C1D8CEB /* Pods_Moji_UttanUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +100,8 @@
 				397A4CBA21A000FB0047DF7A /* Moji UttanTests */,
 				397A4CC521A000FB0047DF7A /* Moji UttanUITests */,
 				397A4CA421A000F90047DF7A /* Products */,
+				3CEBFA83B3A481C9CEFCC526 /* Pods */,
+				FA2900882A745006AEBEA7E5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -131,6 +148,29 @@
 			path = "Moji UttanUITests";
 			sourceTree = "<group>";
 		};
+		3CEBFA83B3A481C9CEFCC526 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				26E089402010DB5D0D797361 /* Pods-Moji Uttan.debug.xcconfig */,
+				D86C2C9C9378F7941A4190F7 /* Pods-Moji Uttan.release.xcconfig */,
+				DF331C40D96D44650A675132 /* Pods-Moji UttanTests.debug.xcconfig */,
+				3246A95118925890DDEEB843 /* Pods-Moji UttanTests.release.xcconfig */,
+				C5E2EB6443F0164A18518F0B /* Pods-Moji UttanUITests.debug.xcconfig */,
+				04713408E4415C206C55A194 /* Pods-Moji UttanUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		FA2900882A745006AEBEA7E5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4562D3F31403DDC8F36C92F8 /* Pods_Moji_Uttan.framework */,
+				5B82680FBE4404AFACC7F551 /* Pods_Moji_UttanTests.framework */,
+				3DAC2DFCB17918245B112B53 /* Pods_Moji_UttanUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -138,9 +178,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 397A4CCB21A000FB0047DF7A /* Build configuration list for PBXNativeTarget "Moji Uttan" */;
 			buildPhases = (
+				0998381D84470C10369DADB1 /* [CP] Check Pods Manifest.lock */,
 				397A4C9F21A000F90047DF7A /* Sources */,
 				397A4CA021A000F90047DF7A /* Frameworks */,
 				397A4CA121A000F90047DF7A /* Resources */,
+				38CB22B6A623BB3B8CE7356E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -155,6 +197,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 397A4CCE21A000FB0047DF7A /* Build configuration list for PBXNativeTarget "Moji UttanTests" */;
 			buildPhases = (
+				82DFD9F6D828C115CF64FE63 /* [CP] Check Pods Manifest.lock */,
 				397A4CB321A000FB0047DF7A /* Sources */,
 				397A4CB421A000FB0047DF7A /* Frameworks */,
 				397A4CB521A000FB0047DF7A /* Resources */,
@@ -173,6 +216,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 397A4CD121A000FB0047DF7A /* Build configuration list for PBXNativeTarget "Moji UttanUITests" */;
 			buildPhases = (
+				FA7A51B457C8E54EC718A1E5 /* [CP] Check Pods Manifest.lock */,
 				397A4CBE21A000FB0047DF7A /* Sources */,
 				397A4CBF21A000FB0047DF7A /* Frameworks */,
 				397A4CC021A000FB0047DF7A /* Resources */,
@@ -262,6 +306,99 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0998381D84470C10369DADB1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Moji Uttan-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		38CB22B6A623BB3B8CE7356E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Moji Uttan/Pods-Moji Uttan-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Moji Uttan/Pods-Moji Uttan-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		82DFD9F6D828C115CF64FE63 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Moji UttanTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FA7A51B457C8E54EC718A1E5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Moji UttanUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		397A4C9F21A000F90047DF7A /* Sources */ = {
@@ -444,6 +581,7 @@
 		};
 		397A4CCC21A000FB0047DF7A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 26E089402010DB5D0D797361 /* Pods-Moji Uttan.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -462,6 +600,7 @@
 		};
 		397A4CCD21A000FB0047DF7A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D86C2C9C9378F7941A4190F7 /* Pods-Moji Uttan.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -480,6 +619,7 @@
 		};
 		397A4CCF21A000FB0047DF7A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DF331C40D96D44650A675132 /* Pods-Moji UttanTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -501,6 +641,7 @@
 		};
 		397A4CD021A000FB0047DF7A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3246A95118925890DDEEB843 /* Pods-Moji UttanTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -522,6 +663,7 @@
 		};
 		397A4CD221A000FB0047DF7A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C5E2EB6443F0164A18518F0B /* Pods-Moji UttanUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -542,6 +684,7 @@
 		};
 		397A4CD321A000FB0047DF7A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 04713408E4415C206C55A194 /* Pods-Moji UttanUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

@@ -1,0 +1,6 @@
+framework module Pods_Moji_UttanTests {
+  umbrella header "Pods-Moji UttanTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
