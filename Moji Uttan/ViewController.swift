@@ -61,7 +61,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var outputButton: UIButton!
     //表示している文字を消すボタン
     @IBOutlet weak var dereteButton: UIButton!
-    
+
     // OutputボタンをタップしたときにtextFieldにある文字をsegueでOutputViewControllerに渡す処理
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let next = segue.destination as? OutputViewController
@@ -89,6 +89,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         performSegue(withIdentifier: "toOutputViewSegue", sender: nil)
         displayTextLabel() //displayTextLabelのメソッドを呼び出す
         buttonStateCheck()// outputButtonとdereteButtonnのボタン判定メソッド
+        seveHistory() //入力した文字を保存する
     }
     
     //ViewController画面のテキストフィールドとラベルの処理
@@ -105,10 +106,22 @@ class ViewController: UIViewController, UITextFieldDelegate {
         buttonStateCheck()//ボタンの非活性判定まとめ
     }
     
+    
     // outputButtonとdereteButtonnのボタン判定メソッド
     func buttonStateCheck(){
         outputButtonState()//textField内に文字がなければボタン非活性にする判定メソッド
         dereteButtonState()//labelに文字が入っていなければボタンを非活性にする判定メソッド
+    }
+    
+    func seveHistory() {
+        let _:NSDate = NSDate()
+        let realm = try! Realm()
+        let History = history()
+        History.title = textField.text!
+        History.textView = textView.text!
+        try! realm.write {
+            realm.add(History)
+        }
     }
     
     //textField内に文字がなければボタン非活性にする判定メソッド

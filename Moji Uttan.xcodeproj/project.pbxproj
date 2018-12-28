@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		390C04A121A96E56008A31EF /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 390C04A021A96E56008A31EF /* HelpViewController.swift */; };
 		390C04A321A96E84008A31EF /* OutputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 390C04A221A96E84008A31EF /* OutputViewController.swift */; };
+		3934E82C21CBE9FC00F4B808 /* history_db.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3934E82B21CBE9FC00F4B808 /* history_db.swift */; };
+		3934E83121D623DB00F4B808 /* historyView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3934E83021D623DB00F4B808 /* historyView.xib */; };
+		3934E83521D6254600F4B808 /* historyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3934E83421D6254600F4B808 /* historyView.swift */; };
+		394CC8E821D63D1800962D2A /* historyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 394CC8E721D63D1800962D2A /* historyViewController.swift */; };
+		394CC8EA21D664A600962D2A /* historyView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 394CC8E921D664A600962D2A /* historyView.storyboard */; };
 		397A4CA721A000F90047DF7A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 397A4CA621A000F90047DF7A /* AppDelegate.swift */; };
 		397A4CA921A000F90047DF7A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 397A4CA821A000F90047DF7A /* ViewController.swift */; };
 		397A4CAC21A000F90047DF7A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 397A4CAA21A000F90047DF7A /* Main.storyboard */; };
@@ -44,6 +49,11 @@
 		3246A95118925890DDEEB843 /* Pods-Moji UttanTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Moji UttanTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Moji UttanTests/Pods-Moji UttanTests.release.xcconfig"; sourceTree = "<group>"; };
 		390C04A021A96E56008A31EF /* HelpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpViewController.swift; sourceTree = "<group>"; };
 		390C04A221A96E84008A31EF /* OutputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutputViewController.swift; sourceTree = "<group>"; };
+		3934E82B21CBE9FC00F4B808 /* history_db.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = history_db.swift; sourceTree = "<group>"; };
+		3934E83021D623DB00F4B808 /* historyView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = historyView.xib; sourceTree = "<group>"; };
+		3934E83421D6254600F4B808 /* historyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = historyView.swift; sourceTree = "<group>"; };
+		394CC8E721D63D1800962D2A /* historyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = historyViewController.swift; sourceTree = "<group>"; };
+		394CC8E921D664A600962D2A /* historyView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = historyView.storyboard; sourceTree = "<group>"; };
 		397A4CA321A000F90047DF7A /* Moji Uttan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Moji Uttan.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		397A4CA621A000F90047DF7A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		397A4CA821A000F90047DF7A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = "Moji Uttan/ViewController.swift"; sourceTree = SOURCE_ROOT; };
@@ -93,6 +103,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3934E82D21D6231000F4B808 /* historyViewParts */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = historyViewParts;
+			sourceTree = "<group>";
+		};
+		3934E82F21D623BC00F4B808 /* historyView */ = {
+			isa = PBXGroup;
+			children = (
+				3934E83021D623DB00F4B808 /* historyView.xib */,
+				3934E83421D6254600F4B808 /* historyView.swift */,
+				394CC8E721D63D1800962D2A /* historyViewController.swift */,
+				394CC8E921D664A600962D2A /* historyView.storyboard */,
+			);
+			path = historyView;
+			sourceTree = "<group>";
+		};
 		397A4C9A21A000F90047DF7A = {
 			isa = PBXGroup;
 			children = (
@@ -118,10 +146,13 @@
 		397A4CA521A000F90047DF7A /* Moji Uttan */ = {
 			isa = PBXGroup;
 			children = (
+				3934E82F21D623BC00F4B808 /* historyView */,
+				3934E82D21D6231000F4B808 /* historyViewParts */,
 				390C04A221A96E84008A31EF /* OutputViewController.swift */,
 				390C04A021A96E56008A31EF /* HelpViewController.swift */,
 				397A4CA621A000F90047DF7A /* AppDelegate.swift */,
 				397A4CA821A000F90047DF7A /* ViewController.swift */,
+				3934E82B21CBE9FC00F4B808 /* history_db.swift */,
 				397A4CAA21A000F90047DF7A /* Main.storyboard */,
 				397A4CAD21A000FA0047DF7A /* Assets.xcassets */,
 				397A4CAF21A000FA0047DF7A /* LaunchScreen.storyboard */,
@@ -286,8 +317,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				397A4CB121A000FA0047DF7A /* LaunchScreen.storyboard in Resources */,
+				3934E83121D623DB00F4B808 /* historyView.xib in Resources */,
 				397A4CAE21A000FA0047DF7A /* Assets.xcassets in Resources */,
 				397A4CAC21A000F90047DF7A /* Main.storyboard in Resources */,
+				394CC8EA21D664A600962D2A /* historyView.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -405,10 +438,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3934E82C21CBE9FC00F4B808 /* history_db.swift in Sources */,
 				397A4CA921A000F90047DF7A /* ViewController.swift in Sources */,
 				390C04A321A96E84008A31EF /* OutputViewController.swift in Sources */,
+				394CC8E821D63D1800962D2A /* historyViewController.swift in Sources */,
 				397A4CA721A000F90047DF7A /* AppDelegate.swift in Sources */,
 				390C04A121A96E56008A31EF /* HelpViewController.swift in Sources */,
+				3934E83521D6254600F4B808 /* historyView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
