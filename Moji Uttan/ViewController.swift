@@ -107,6 +107,12 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
     
     
+//    @IBAction func historyButton(_ sender: Any) {
+//        let storyboard : UIStoryboard = UIStoryboard(name: "historyView", bundle: nil)
+//        let nextView = storyboard.instantiateInitialViewController()
+//        self.present(nextView!, animated: true, completion: nil)
+//    }
+//    
     // outputButtonとdereteButtonnのボタン判定メソッド
     func buttonStateCheck(){
         outputButtonState()//textField内に文字がなければボタン非活性にする判定メソッド
@@ -155,3 +161,4 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
     
 }
+

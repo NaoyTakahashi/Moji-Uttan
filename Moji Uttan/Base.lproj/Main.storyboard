@@ -29,7 +29,7 @@
         <!--もじうったん-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController title="もじうったん" id="BYZ-38-t0r" customClass="ViewController" customModule="Moji_Uttan" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewController" title="もじうったん" id="BYZ-38-t0r" customClass="ViewController" customModule="Moji_Uttan" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -115,6 +115,9 @@
                                 <state key="normal" title="History">
                                     <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="3o3-ev-Tof" kind="show" id="2lX-yM-D6R"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -137,7 +140,7 @@
         <!--もじうったん！？-->
         <scene sceneID="wyc-ko-5d3">
             <objects>
-                <viewController id="8NQ-Ik-oKJ" customClass="OutputViewController" customModule="Moji_Uttan" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="OutputViewController" id="8NQ-Ik-oKJ" customClass="OutputViewController" customModule="Moji_Uttan" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BvS-Ca-REc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -198,10 +201,18 @@
             </objects>
             <point key="canvasLocation" x="989.60000000000002" y="775.86206896551732"/>
         </scene>
+        <!--historyViewController-->
+        <scene sceneID="vaG-S3-Uzx">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="historyView" storyboardName="historyView" referencedIdentifier="historyViewController" id="3o3-ev-Tof" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4RX-E5-sCd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1099" y="1401"/>
+        </scene>
         <!--Help View Controller-->
         <scene sceneID="PfF-yH-Jec">
             <objects>
-                <viewController id="FuY-0c-cth" customClass="HelpViewController" customModule="Moji_Uttan" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HelpViewController" id="FuY-0c-cth" customClass="HelpViewController" customModule="Moji_Uttan" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hPN-86-mhV">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
