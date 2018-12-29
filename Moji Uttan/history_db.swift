@@ -10,7 +10,7 @@ import Foundation
 import RealmSwift
 
 class history: Object {
-    @objc dynamic var date: String = ""
+    @objc dynamic var date : String = ""
     @objc dynamic var title: String = ""
     @objc dynamic var textView: String = ""
 }

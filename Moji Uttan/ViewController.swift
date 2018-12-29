@@ -86,10 +86,10 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     //出力ボタン
     @IBAction func OutputButton(_ sender: UIButton) {
+        seveHistory() //入力した文字を保存する
         performSegue(withIdentifier: "toOutputViewSegue", sender: nil)
         displayTextLabel() //displayTextLabelのメソッドを呼び出す
         buttonStateCheck()// outputButtonとdereteButtonnのボタン判定メソッド
-        seveHistory() //入力した文字を保存する
     }
     
     //ViewController画面のテキストフィールドとラベルの処理
@@ -106,13 +106,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
         buttonStateCheck()//ボタンの非活性判定まとめ
     }
     
-    
-//    @IBAction func historyButton(_ sender: Any) {
-//        let storyboard : UIStoryboard = UIStoryboard(name: "historyView", bundle: nil)
-//        let nextView = storyboard.instantiateInitialViewController()
-//        self.present(nextView!, animated: true, completion: nil)
-//    }
-//    
     // outputButtonとdereteButtonnのボタン判定メソッド
     func buttonStateCheck(){
         outputButtonState()//textField内に文字がなければボタン非活性にする判定メソッド
@@ -120,15 +113,32 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
     
     func seveHistory() {
-        let _:NSDate = NSDate()
-        let realm = try! Realm()
-        let History = history()
+        let getDate = dateFormat() //Date型をString型にフォーマットする
+        let realm = try! Realm() //Realmをインスタンス化する
+        let History = history() //Realm用に定義したhistory()をHistoryに代入
+        History.date = getDate //返したgetDateをここで使う
         History.title = textField.text!
         History.textView = textView.text!
         try! realm.write {
-            realm.add(History)
+            realm.add(History) //各変数に代入した値をRealmに書き込む
         }
+        //Realmファイルの保存先を表示させる
+        print(Realm.Configuration.defaultConfiguration.fileURL!) //Realmのファイルの場所を確認する
     }
+    
+    //Date型をString型にフォーマットする
+    func dateFormat() -> String {
+        let format = DateFormatter()
+        format.dateFormat = "yyyy/mm/dd HH:mm:ss"
+        
+        //String型に変換したDateを入れる
+        let getDate = format.string(from: Date())
+        print(getDate)
+        
+        //String型Dateを返す
+        return getDate
+    }
+    
     
     //textField内に文字がなければボタン非活性にする判定メソッド
     func outputButtonState() {
