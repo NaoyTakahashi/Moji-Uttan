@@ -116,6 +116,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         let getDate = dateFormat() //Date型をString型にフォーマットする
         let realm = try! Realm() //Realmをインスタンス化する
         let History = history() //Realm用に定義したhistory()をHistoryに代入
+        History.id = realm.objects(history.self).count //idを乗算してできるらしい
         History.date = getDate //返したgetDateをここで使う
         History.title = textField.text!
         History.textView = textView.text!
@@ -129,7 +130,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     //Date型をString型にフォーマットする
     func dateFormat() -> String {
         let format = DateFormatter()
-        format.dateFormat = "yyyy/mm/dd HH:mm:ss"
+        format.dateFormat = "YYYY/MM/dd HH:mm:ss"
         
         //String型に変換したDateを入れる
         let getDate = format.string(from: Date())
