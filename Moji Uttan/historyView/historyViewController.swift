@@ -9,45 +9,54 @@
 import UIKit
 import RealmSwift
 
-class historyViewController: UITableViewController  {
-    
-    var hitorydate: Results<history>!
+    //メモ：UIViewControllerを使ってTableViewを追加するときははUITableViewDelegate, UITableViewDataSourceが必要
+class historyViewController: UIViewController, UITableViewDelegate, UITableViewDataSource  {
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // 永続化されているデータを取りだす
-        do{
-            let realm = try Realm()
-            hitorydate = realm.objects(history.self)
-            tableView.reloadData()
-        }catch{
-            
-        }
-        
+        //ClassにUITableViewDelegate, UITableViewDataSourceを追加したらviewDidLoadにこれを追加する
+        historyTable.dataSource = self
+        historyTable.delegate = self
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        tableView.reloadData()
-    }
-    
+    //これはよくわかってない
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+        
     }
     
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int)->Int {
-        return hitorydate.count
+    //RealmのオブジェクトをResults型に入れておく
+    var hitorydate: Results<history>!
+    
+    //TableViewをOutletする
+    @IBOutlet weak var historyTable: UITableView!
+   
+    //tableViewのCellの数の設定をする
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        //tableViewにcellの数5を戻り値にして返す
+        return 5
     }
     
-    internal override func tableView(_ tableView: UITableView, cellForRowAt indexpath: IndexPath)->UITableViewCell {
-        let cell: UITableViewCell = UITableViewCell(style: UITableViewCell.CellStyle.default, reuseIdentifier: "Cell")
+    //セクションの数を設定する・・・セクションとは？
+    func numberOfSections(in tableView: UITableView) -> Int {
+        //tableViewにセクションの数1を戻り値にして返す
+        return 1
+    }
+    
+    //TableViewのなかで一番重要な設定場所らしい
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let object = hitorydate[indexpath.row]
+        //StoryboardのtableViewCellで指定したcellの中に文字を代入するやつ
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        cell.textLabel?.text = "swift"
         
-        cell.textLabel?.text = object.title
+        //tableViewにcellの中身を戻り値にして返す
         return cell
+        
     }
+        
     
 
 }
