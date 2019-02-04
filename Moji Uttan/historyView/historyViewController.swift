@@ -12,12 +12,23 @@ import RealmSwift
     //メモ：UIViewControllerを使ってTableViewを追加するときははUITableViewDelegate, UITableViewDataSourceが必要
 class historyViewController: UIViewController, UITableViewDelegate, UITableViewDataSource  {
     
+    //RealmのオブジェクトをResults型に入れておく
+    var historyItem: Results<history>!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         //ClassにUITableViewDelegate, UITableViewDataSourceを追加したらviewDidLoadにこれを追加する
         historyTable.dataSource = self
         historyTable.delegate = self
+        
+        do{
+            let realm = try Realm()
+            historyItem = realm.objects(history.self)
+            historyTable.reloadData()
+        }catch{
+            
+        }
     }
     
     //これはよくわかってない
@@ -26,37 +37,37 @@ class historyViewController: UIViewController, UITableViewDelegate, UITableViewD
         
     }
     
-    //RealmのオブジェクトをResults型に入れておく
-    var hitorydate: Results<history>!
-    
     //TableViewをOutletする
     @IBOutlet weak var historyTable: UITableView!
    
     //tableViewのCellの数の設定をする
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        //tableViewにcellの数5を戻り値にして返す
-        return 5
+        //Realmに登録されているオブジェクトの数をカウントしてCell生成の数を戻り値にして返す
+        return historyItem.count
     }
     
     //セクションの数を設定する・・・セクションとは？
-    func numberOfSections(in tableView: UITableView) -> Int {
-        //tableViewにセクションの数1を戻り値にして返す
-        return 1
-    }
-    
+//    func numberOfSections(in tableView: UITableView) -> Int {
+//        //tableViewにセクションの数1を戻り値にして返す
+//        return 2
+//    }
+//
     //TableViewのなかで一番重要な設定場所らしい
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        //StoryboardのtableViewCellで指定したcellの中に文字を代入するやつ
+        //ここでindexViewのCellについて何かを設定している　多分indexPathを指定？してる　配列とかかも
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = "swift"
+
+//        cell.textLabel?.text = "swift"
+        
+        //Realmオブジェクトが入っているhistoryItemをobjectに代入する
+        let object = historyItem[indexPath.row]
+        //historyItemの中にあるtitleをcellのtextLabelに代入する
+        cell.textLabel?.text = object.title
         
         //tableViewにcellの中身を戻り値にして返す
         return cell
-        
     }
-        
     
-
 }
