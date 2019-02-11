@@ -30,6 +30,9 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="drb-GG-ReC" kind="show" id="Odw-7M-ano"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -48,6 +51,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aGh-HE-y4g" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-874.39999999999998" y="-1068.215892053973"/>
+        </scene>
+        <!--detailHistoryViewController-->
+        <scene sceneID="mdu-mN-jlo">
+            <objects>
+                <viewControllerPlaceholder storyboardName="detailHistoryView" referencedIdentifier="detailHistoryViewController" id="drb-GG-ReC" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WBH-BR-MGU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="57" y="-1069"/>
         </scene>
     </scenes>
 </document>
