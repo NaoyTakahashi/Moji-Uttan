@@ -12,16 +12,32 @@ class detailHistoryViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Do any additional setup after loading the view.
+        textViewOutputSet()
+        viewLabelSet()
     }
 
+    //viewLabelsetの枠線を指定する
+    func viewLabelSet(){
+        //文字入力位置の変更
+        titleDetailView.textContainer.lineFragmentPadding = 8
+    }
+    
+    //textViewOutputSetの枠線を指定する
+    func textViewOutputSet() {
+        //文字入力位置の変更
+        textDetailView.textContainer.lineFragmentPadding = 8
+    }
     
     @IBOutlet weak var titleDetailView: UITextView!
     @IBOutlet weak var textDetailView: UITextView!
     
+//    //前の画面に戻る
+//    @IBAction func backView(){
+//        self.navigationController?.popViewController(animated: true)
+//        viewLabel.text = nil
+//    }
+//    
     
-   
     
 
 }

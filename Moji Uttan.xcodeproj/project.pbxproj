@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		390C04A121A96E56008A31EF /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 390C04A021A96E56008A31EF /* HelpViewController.swift */; };
-		390C04A321A96E84008A31EF /* OutputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 390C04A221A96E84008A31EF /* OutputViewController.swift */; };
 		390C496E220EE75100832728 /* detailHistoryView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 390C496D220EE75100832728 /* detailHistoryView.storyboard */; };
 		390C4970220EE79900832728 /* detailHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 390C496F220EE79900832728 /* detailHistoryViewController.swift */; };
 		3934E82C21CBE9FC00F4B808 /* history_db.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3934E82B21CBE9FC00F4B808 /* history_db.swift */; };
@@ -51,7 +50,6 @@
 		26E089402010DB5D0D797361 /* Pods-Moji Uttan.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Moji Uttan.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Moji Uttan/Pods-Moji Uttan.debug.xcconfig"; sourceTree = "<group>"; };
 		3246A95118925890DDEEB843 /* Pods-Moji UttanTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Moji UttanTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Moji UttanTests/Pods-Moji UttanTests.release.xcconfig"; sourceTree = "<group>"; };
 		390C04A021A96E56008A31EF /* HelpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpViewController.swift; sourceTree = "<group>"; };
-		390C04A221A96E84008A31EF /* OutputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutputViewController.swift; sourceTree = "<group>"; };
 		390C496D220EE75100832728 /* detailHistoryView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = detailHistoryView.storyboard; sourceTree = "<group>"; };
 		390C496F220EE79900832728 /* detailHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = detailHistoryViewController.swift; sourceTree = "<group>"; };
 		3934E82B21CBE9FC00F4B808 /* history_db.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = history_db.swift; sourceTree = "<group>"; };
@@ -156,7 +154,6 @@
 			children = (
 				390C496C220EE71600832728 /* detailHistoryView */,
 				3934E82F21D623BC00F4B808 /* historyView */,
-				390C04A221A96E84008A31EF /* OutputViewController.swift */,
 				390C04A021A96E56008A31EF /* HelpViewController.swift */,
 				397A4CA621A000F90047DF7A /* AppDelegate.swift */,
 				397A4CA821A000F90047DF7A /* ViewController.swift */,
@@ -452,7 +449,6 @@
 				394CC8EC21D688AB00962D2A /* transitionProtocol.swift in Sources */,
 				3934E82C21CBE9FC00F4B808 /* history_db.swift in Sources */,
 				397A4CA921A000F90047DF7A /* ViewController.swift in Sources */,
-				390C04A321A96E84008A31EF /* OutputViewController.swift in Sources */,
 				394CC8E821D63D1800962D2A /* historyViewController.swift in Sources */,
 				397A4CA721A000F90047DF7A /* AppDelegate.swift in Sources */,
 				390C04A121A96E56008A31EF /* HelpViewController.swift in Sources */,

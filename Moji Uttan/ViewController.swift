@@ -64,10 +64,10 @@ class ViewController: UIViewController, UITextFieldDelegate {
 
     // OutputボタンをタップしたときにtextFieldにある文字をsegueでOutputViewControllerに渡す処理
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let next = segue.destination as? OutputViewController
+        let next = segue.destination as? detailHistoryViewController
         let _ = next?.view
-        next?.viewLabel.text = textField.text
-        next?.textViewOutput.text = textView.text
+        next?.titleDetailView.text = textField.text
+        next?.textDetailView.text = textView.text
     }
     
     //テキストフィールド内がnilの場合ボタンを押せないようにするイベント
@@ -87,7 +87,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     //出力ボタン
     @IBAction func OutputButton(_ sender: UIButton) {
         seveHistory() //入力した文字を保存する
-        performSegue(withIdentifier: "toOutputViewSegue", sender: nil)
+        performSegue(withIdentifier: "toDetailHistoryViewSegue", sender: nil)
         displayTextLabel() //displayTextLabelのメソッドを呼び出す
         buttonStateCheck()// outputButtonとdereteButtonnのボタン判定メソッド
     }

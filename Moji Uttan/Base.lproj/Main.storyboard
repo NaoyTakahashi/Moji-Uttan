@@ -130,76 +130,20 @@
                         <outlet property="outputButton" destination="93p-9v-PPX" id="onA-yC-9Mb"/>
                         <outlet property="textField" destination="CGQ-Sh-MFS" id="GjW-2o-JWy"/>
                         <outlet property="textView" destination="gQG-3y-Kda" id="8Eb-DI-NVg"/>
-                        <segue destination="8NQ-Ik-oKJ" kind="show" identifier="toOutputViewSegue" id="xIu-vY-ul9"/>
+                        <segue destination="mC7-du-Scv" kind="show" identifier="toDetailHistoryViewSegue" id="LD1-XR-FFs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="181.59999999999999" y="775.86206896551732"/>
         </scene>
-        <!--もじうったん！？-->
-        <scene sceneID="wyc-ko-5d3">
+        <!--detailHistoryViewController-->
+        <scene sceneID="JxM-Wt-H31">
             <objects>
-                <viewController storyboardIdentifier="OutputViewController" id="8NQ-Ik-oKJ" customClass="OutputViewController" customModule="Moji_Uttan" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="BvS-Ca-REc">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N0P-bh-fKn">
-                                <rect key="frame" x="270" y="599" width="70" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <state key="normal" title="Back">
-                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="backView" destination="8NQ-Ik-oKJ" eventType="touchUpInside" id="LNg-a7-CgV"/>
-                                </connections>
-                            </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="WqE-14-3yy">
-                                <rect key="frame" x="38" y="202" width="300" height="380"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="タイトル" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PRC-q0-AjI">
-                                <rect key="frame" x="36" y="94" width="75" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="本文" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Nj-lD-013">
-                                <rect key="frame" x="36" y="176" width="42" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U2C-4w-iL3">
-                                <rect key="frame" x="37" y="120" width="300" height="48"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="fD8-Q1-WVy"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="もじうったん！？" id="gli-Ck-579"/>
-                    <connections>
-                        <outlet property="backToTop" destination="N0P-bh-fKn" id="khj-FE-n8u"/>
-                        <outlet property="textViewOutput" destination="WqE-14-3yy" id="w4u-jU-awY"/>
-                        <outlet property="viewLabel" destination="U2C-4w-iL3" id="l2L-lD-3aK"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="tgu-TH-NAJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardName="detailHistoryView" referencedIdentifier="detailHistoryViewController" id="mC7-du-Scv" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="313-aI-B2R" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="989.60000000000002" y="775.86206896551732"/>
+            <point key="canvasLocation" x="1098" y="775"/>
         </scene>
         <!--historyViewController-->
         <scene sceneID="vaG-S3-Uzx">
