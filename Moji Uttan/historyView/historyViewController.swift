@@ -34,7 +34,6 @@ class historyViewController: UIViewController, UITableViewDelegate, UITableViewD
     //これはよくわかってない
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        
     }
     
     //TableViewをOutletする
@@ -47,19 +46,16 @@ class historyViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     //セクションの数を設定する・・・セクションとは？
-//    func numberOfSections(in tableView: UITableView) -> Int {
-//        //tableViewにセクションの数1を戻り値にして返す
-//        return 2
-//    }
-//
+    func numberOfSections(in tableView: UITableView) -> Int {
+        //tableViewにセクションの数1を戻り値にして返す
+        return 1
+    }
+
     //TableViewのなかで一番重要な設定場所らしい
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
         //ここでindexViewのCellについて何かを設定している　多分indexPathを指定？してる　配列とかかも
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-
-//        cell.textLabel?.text = "swift"
         
         //Realmオブジェクトが入っているhistoryItemをobjectに代入する
         let object = historyItem[indexPath.row]
@@ -70,4 +66,19 @@ class historyViewController: UIViewController, UITableViewDelegate, UITableViewD
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        // SubViewController へ遷移するために Segue を呼び出す
+        performSegue(withIdentifier: "toDetail",sender: nil)
+        
+    }
+    
+    // OutputボタンをタップしたときにtextFieldにある文字をsegueでOutputViewControllerに渡す処理
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "toDetail") {
+        let next = segue.destination as? detailHistoryViewController
+        let _ = next?.view
+        next?.titleDetailView.text = historyItem[0].title
+        next?.textDetailView.text = historyItem[0].textView
+        }
+    }
 }

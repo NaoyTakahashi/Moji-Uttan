@@ -30,9 +30,6 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="drb-GG-ReC" kind="show" id="Odw-7M-ano"/>
-                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -46,6 +43,7 @@
                     </view>
                     <connections>
                         <outlet property="historyTable" destination="m3k-uz-qnz" id="0fb-Ou-BSK"/>
+                        <segue destination="drb-GG-ReC" kind="show" identifier="toDetail" id="CUF-md-uH3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aGh-HE-y4g" userLabel="First Responder" sceneMemberID="firstResponder"/>
