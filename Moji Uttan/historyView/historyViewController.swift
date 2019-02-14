@@ -14,6 +14,7 @@ class historyViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     //RealmのオブジェクトをResults型に入れておく
     var historyItem: Results<history>!
+    var hoge: Int?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -67,6 +68,7 @@ class historyViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        hoge = indexPath.row
         // SubViewController へ遷移するために Segue を呼び出す
         performSegue(withIdentifier: "toDetail",sender: nil)
         
@@ -75,10 +77,11 @@ class historyViewController: UIViewController, UITableViewDelegate, UITableViewD
     // OutputボタンをタップしたときにtextFieldにある文字をsegueでOutputViewControllerに渡す処理
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "toDetail") {
-        let next = segue.destination as? detailHistoryViewController
-        let _ = next?.view
-        next?.titleDetailView.text = historyItem[0].title
-        next?.textDetailView.text = historyItem[0].textView
+            let next = segue.destination as? detailHistoryViewController
+            let _ = next?.view
+            next?.titleDetailView.text = historyItem[hoge!].title
+            next?.textDetailView.text = historyItem[hoge!].textView
+            
         }
     }
 }
