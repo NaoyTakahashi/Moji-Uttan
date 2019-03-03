@@ -30,6 +30,9 @@ class historyViewController: UIViewController, UITableViewDelegate, UITableViewD
         }catch{
             
         }
+        
+        self.historyTable.register(UINib(nibName: "historyViewCell", bundle: nil), forCellReuseIdentifier:
+            "historyViewCell")
     }
     
     //これはよくわかってない
@@ -52,16 +55,22 @@ class historyViewController: UIViewController, UITableViewDelegate, UITableViewD
         return 1
     }
 
-    //TableViewのなかで一番重要な設定場所らしい
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 90
+    }
     
+    //TableViewのなかで一番重要な設定場所らしい
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         //ここでindexViewのCellについて何かを設定している　多分indexPathを指定？してる　配列とかかも
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "historyViewCell", for: indexPath) as! historyViewCell
         
         //Realmオブジェクトが入っているhistoryItemをobjectに代入する
         let object = historyItem[indexPath.row]
         //historyItemの中にあるtitleをcellのtextLabelに代入する
-        cell.textLabel?.text = object.title
+        cell.historyDate?.text = object.date
+        cell.historyTitle?.text = object.title
+        cell.historyText?.text = object.textView
+        cell.historyImage?.image = UIImage(named: "defaultTori")
         
         //tableViewにcellの中身を戻り値にして返す
         return cell
