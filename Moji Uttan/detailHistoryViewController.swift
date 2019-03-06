@@ -28,6 +28,7 @@ class detailHistoryViewController: UIViewController {
         textDetailView.textContainer.lineFragmentPadding = 8
     }
     
+    @IBOutlet weak var hoge: UINavigationBar!
     @IBOutlet weak var titleDetailView: UITextView!
     @IBOutlet weak var textDetailView: UITextView!
     
