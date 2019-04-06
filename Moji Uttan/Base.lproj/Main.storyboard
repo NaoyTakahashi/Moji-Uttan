@@ -159,7 +159,7 @@
                 <viewControllerPlaceholder storyboardName="detailHistoryView" referencedIdentifier="detailHistoryViewController" id="mC7-du-Scv" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="313-aI-B2R" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1098" y="775"/>
+            <point key="canvasLocation" x="1097" y="753"/>
         </scene>
         <!--historyViewController-->
         <scene sceneID="vaG-S3-Uzx">
@@ -167,7 +167,7 @@
                 <viewControllerPlaceholder storyboardIdentifier="historyView" storyboardName="historyView" referencedIdentifier="historyViewController" id="3o3-ev-Tof" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4RX-E5-sCd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1099" y="1401"/>
+            <point key="canvasLocation" x="1068" y="799"/>
         </scene>
         <!--Help View Controller-->
         <scene sceneID="PfF-yH-Jec">
@@ -261,7 +261,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CYM-dW-25h" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="181.59999999999999" y="1717.6911544227887"/>
+            <point key="canvasLocation" x="182" y="1522"/>
         </scene>
     </scenes>
     <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
