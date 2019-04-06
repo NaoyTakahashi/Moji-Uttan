@@ -36,4 +36,19 @@ ServerConnection_with_Dockerブランチでやりたいこと
      メモ詳細画面
       ・一覧画面でタップしたメモの内容を取得して表示させる
     
-    
+    DBの名前
+      ローカルDB名
+        localHistory
+          実装するカラム
+            id(Primary Key):DBに登録した番号
+            date:登録した日時（"YYYY/MM/dd HH:mm:ss"）
+            title:入力したタイトル（必須、文字数制限なし）
+            textView:入力したテキスト（文字数制限なし）
+          
+      サーバーDB名
+        serverHistory
+          実装するカラム
+            id(Primary Key):DBに登録した番号
+            date:登録した日時（"YYYY/MM/dd HH:mm:ss"）
+            title:入力したタイトル（必須、文字数制限なし）
+            textView:入力したテキスト（文字数制限なし）    
