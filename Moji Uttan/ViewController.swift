@@ -18,7 +18,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         self.navigationController?.navigationBar.tintColor = UIColor(named: "backBule")
         textViewSet() //textViewの枠線指定
          // 初回画面表示時はボタンを非活性にする
-        buttonStateCheck() //outputButtonとdereteButtonnのボタン判定メソッド
+        outputButtonState()//textField内に文字がなければボタン非活性にする判定メソッド
         keybordSet() //キーボードにDoneボタンを追加
     }
     
@@ -55,24 +55,20 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var textField: UITextField!
     //文章入力欄
     @IBOutlet weak var textView: UITextView!
-    //出力した文字列
-    @IBOutlet weak var label: UILabel!
     //入力した文字を表示するボタン
     @IBOutlet weak var outputButton: UIButton!
-    //表示している文字を消すボタン
-    @IBOutlet weak var dereteButton: UIButton!
-    
+
     // OutputボタンをタップしたときにtextFieldにある文字をsegueでOutputViewControllerに渡す処理
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let next = segue.destination as? OutputViewController
+        let next = segue.destination as? detailHistoryViewController
         let _ = next?.view
-        next?.viewLabel.text = textField.text
-        next?.textViewOutput.text = textView.text
+        next?.titleDetailView.text = textField.text
+        next?.textDetailView.text = textView.text
     }
     
     //テキストフィールド内がnilの場合ボタンを押せないようにするイベント
     @IBAction func textFieldEditingChanged(_ sender: Any) {
-        buttonStateCheck()// outputButtonとdereteButtonnのボタン判定メソッド
+       outputButtonState()//textField内に文字がなければボタン非活性にする判定メソッド
     }
     
     //テキストの文字数制限
@@ -86,30 +82,47 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     //出力ボタン
     @IBAction func OutputButton(_ sender: UIButton) {
-        performSegue(withIdentifier: "toOutputViewSegue", sender: nil)
+        seveHistory() //入力した文字を保存する
+        performSegue(withIdentifier: "toDetailHistoryViewSegue", sender: nil)
         displayTextLabel() //displayTextLabelのメソッドを呼び出す
-        buttonStateCheck()// outputButtonとdereteButtonnのボタン判定メソッド
+        outputButtonState()//textField内に文字がなければボタン非活性にする判定メソッド
     }
     
     //ViewController画面のテキストフィールドとラベルの処理
     func displayTextLabel() {
-        label.text = textField.text //入力した文字を表示
         textField.text = nil //タイトル入力欄の文字を削除
         textView.text = nil //文章入力欄の文字を削除
         textField.endEditing(true) //キーボードを閉じる
     }
     
-    //出力された文字列を削除するボタン
-    @IBAction func DeleteButton(_ sender: UIButton) {
-        label.text = "" //タイトルlabelの文字を削除
-        buttonStateCheck()//ボタンの非活性判定まとめ
+    func seveHistory() {
+        let getDate = dateFormat() //Date型をString型にフォーマットする
+        let realm = try! Realm() //Realmをインスタンス化する
+        let History = history() //Realm用に定義したhistory()をHistoryに代入
+        History.id = realm.objects(history.self).count //idを乗算してできるらしい
+        History.date = getDate //返したgetDateをここで使う
+        History.title = textField.text!
+        History.textView = textView.text!
+        try! realm.write {
+            realm.add(History) //各変数に代入した値をRealmに書き込む
+        }
+        //Realmファイルの保存先を表示させる
+        print(Realm.Configuration.defaultConfiguration.fileURL!) //Realmのファイルの場所を確認する
     }
     
-    // outputButtonとdereteButtonnのボタン判定メソッド
-    func buttonStateCheck(){
-        outputButtonState()//textField内に文字がなければボタン非活性にする判定メソッド
-        dereteButtonState()//labelに文字が入っていなければボタンを非活性にする判定メソッド
+    //Date型をString型にフォーマットする
+    func dateFormat() -> String {
+        let format = DateFormatter()
+        format.dateFormat = "YYYY/MM/dd HH:mm:ss"
+        
+        //String型に変換したDateを入れる
+        let getDate = format.string(from: Date())
+        print(getDate)
+        
+        //String型Dateを返す
+        return getDate
     }
+    
     
     //textField内に文字がなければボタン非活性にする判定メソッド
     func outputButtonState() {
@@ -118,16 +131,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
             outputButton.setTitleColor(UIColor.lightGray, for: .disabled)  //非活性時は灰色にする
         } else {
             outputButton.isEnabled = true
-        }
-    }
-    
-    //labelに文字が入っていなければボタンを非活性にする判定メソッド
-    func dereteButtonState() {
-        if label.text == "" {
-            dereteButton.isEnabled = false
-            dereteButton.setTitleColor(UIColor.lightGray, for: .disabled)
-        } else {
-            dereteButton.isEnabled = true
         }
     }
     
@@ -142,3 +145,4 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
     
 }
+
