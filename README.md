@@ -38,7 +38,7 @@ ServerConnection_with_Dockerブランチでやりたいこと
     
     DBの名前
       ローカルDB名
-        localHistory
+        local_history
           実装するカラム
             id(Primary Key):DBに登録した番号
             date:登録した日時（"YYYY/MM/dd HH:mm:ss"）
@@ -46,7 +46,7 @@ ServerConnection_with_Dockerブランチでやりたいこと
             textView:入力したテキスト（文字数制限なし）
           
       サーバーDB名
-        serverHistory
+        server_history
           実装するカラム
             id(Primary Key):DBに登録した番号
             date:登録した日時（"YYYY/MM/dd HH:mm:ss"）
