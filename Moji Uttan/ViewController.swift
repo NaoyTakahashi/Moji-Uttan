@@ -144,5 +144,14 @@ class ViewController: UIViewController, UITextFieldDelegate {
         return true
     }
     
+    //テスト部分
+    @IBOutlet weak var testAPI: UIButton!
+    @IBAction func test(_ sender: Any) {
+        let client: HTTPClient = HTTPClient()
+        client.get()
+    }
+    
+    
+    
 }
 
